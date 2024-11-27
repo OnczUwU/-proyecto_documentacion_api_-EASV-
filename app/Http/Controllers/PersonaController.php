@@ -3,12 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use OpenApi\Atributes as OA;
 use App\Models\Persona;
 use Exception;
 
 class PersonaController extends Controller
 {
-    //
+   //
     public function obtener($id){
         $datos = Persona::where("id_persona",$id)->get();
         if($datos->isNotEmpty()){
